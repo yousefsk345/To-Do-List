@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    min-height: 100vh;
+    background: url(background.jpeg) no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+}
+.container {
+    margin-top: 40px;
+    padding: 40px 30px;
+    height: fit-content;
+    width: 650px;
+    margin-bottom: 40px;
+}
+@media (max-width:767px) {
+    .container {
+        width: 90%;
+        margin: 20px auto;
+    }
+}
+
+.task-content {
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 50px 30px;
+    /* display: flex; */
+}
+h2 {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+.check-icon {
+    color: orange;
+    margin-left: 5px;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eee;
+    border-radius: 50px;
+    margin-bottom: 25px;
+    
+}
+#input-task {
+    padding: 18px;
+    background-color: transparent;
+    border: none;
+    flex: 1;
+    font-size: 15px;
+}
+#input-task:focus {
+    outline: none;
+}
+#add-task {
+    border: none;
+    background-color: rgb(200, 150, 100);
+    padding: 20px 55px;
+    border-radius: 50px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#add-task:hover {
+    background-color: rgb(184, 173, 20);
+}
+ul li {
+    font-size: 18px;
+    padding: 15px;
+    padding-left: 50px;
+    list-style-type: none;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+ul li.checked {
+    text-decoration: line-through;
+    color: #777;
+}
+ul li::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #eee;
+    border: 2px solid #777;
+    left: 0px;
+}
+ul li.checked::before {
+    content: "\f00c";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-color:  rgb(184, 173, 20);
+    background-color: rgb(184, 173, 20);
+    font-size: 12px;
+
+}
+.delete-task {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 25px;
+    margin-top: 5px;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.delete-task:hover {
+    background-color: #eee;
+}
