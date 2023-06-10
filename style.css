@@ -70,6 +70,17 @@ h2 {
     font-weight: bold;
     cursor: pointer;
 }
+@media (max-width:767px) {
+    #add-task {
+        padding: 0px 10px;
+        position: relative;
+        right: 20px;
+        width: 54px;
+        height: 54px;
+        align-items: center;
+        border-radius: 50%;
+    }
+}
 #add-task:hover {
     background-color: rgb(184, 173, 20);
 }
